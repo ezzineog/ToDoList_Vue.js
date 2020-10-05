@@ -12,8 +12,7 @@
         <input type="checkbox"  v-model="todo.completed">
         <div
           v-if="!todo.edit"
-          @dblclick="editTodo(todo)"
-          class="todo-item-label" > 
+          @dblclick="editTodo(todo)" class="todo-item-label">
           {{ todo.title }}
         </div>
         <input
@@ -24,7 +23,6 @@
           @blur="doneEdit(todo)"
           @keyup.enter="doneEdit(todo)"
           @keyup.esc="cancelEdit(todo)"
-
           v-focus
         />
       </div>
